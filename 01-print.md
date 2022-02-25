@@ -24,7 +24,7 @@ print(my_var)
 
 # Print a variable combined with a string
 my_var = 10
-print('The value of the variable is: ' + str(my_var))
+print('The value of the variable is:', my_var)
 
 # OR
 
