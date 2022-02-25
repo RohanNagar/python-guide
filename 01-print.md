@@ -15,7 +15,7 @@ print('No newline after this', end='')
 # Print a string message with a space at the end
 print('Put a space after this', end=' ')
 
-# Print a string multiple times on the same line
+# Repeat a string 10 times on the same line
 print('%'*10, end='')
 
 # Print a variable
