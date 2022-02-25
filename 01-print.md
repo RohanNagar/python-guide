@@ -30,4 +30,15 @@ print('The value of the variable is:', my_var)
 
 my_var = 10
 print(f'The value of the variable is: {my_var}')
+
+# Print two variables combined with a string
+my_var = 10
+my_second_var = 20
+print('The value of variable one is', my_var, 'and the value of variable two is', my_second_var)
+
+# OR
+
+my_var = 10
+my_second_var = 20
+print(f'The value of variable one is {my_var} and the value of variable two is {my_second_var}')
 ```
