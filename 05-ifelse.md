@@ -71,7 +71,7 @@ else:
   print('NO')
 ```
 
-3. Write a program that asks the user to enter an interger and prints 'YES' if the number is even OR less than 100. Otherwise it prints 'NO'
+4. Write a program that asks the user to enter an interger and prints 'YES' if the number is even OR less than 100. Otherwise it prints 'NO'
 
 ```python
 # Get the input
