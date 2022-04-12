@@ -74,6 +74,12 @@ from random import randint, random
 
 randint(1, 30)
 random()
+
+# Import all functions from a module, then just use "function()" syntax
+from random import *
+
+randint(1, 32)
+random()
 ```
 
 ## Boolean Logic
@@ -129,6 +135,48 @@ else:
   print(f'The number {x} is zero!')
 ```
 
+## Strings
+
+```python
+my_str = 'Hello There'
+
+len(my_str)        -> 11      # Get the length of a string (number of characters in the str)
+my_str[0]          -> 'H'     # Get the first character in a string
+my_str[-1]         -> 'e'     # Get the last character in a string
+my_str[1]          -> 'e'     # Get the second character in a string
+my_str[-2]         -> 'r'     # Get the second to last character in a string
+
+# To get a sub-string, do my_str[start:end] (remember end is not included!)
+my_str[0:4]        -> 'Hell'
+my_str[0:1]        -> 'H'
+my_str[2:5]        -> 'llo'
+my_str[:3]         -> 'Hel'          # start at beginning and end at index 2
+my_str[3:]         -> 'lo There'     # start at index 3 and go to end
+```
+
+## String Functions
+
+```python
+my_str = "Hello" + " " + "World"     -> "Hello World"     # Add strings together
+my_str = "Hey" * 3                   -> "HeyHeyHey"       # Can replicate strings too
+
+my_str = "Hello World"
+
+my_str.startswith('Hello')       -> True          # Returns a bool that is True if my_str starts with 'Hello'
+my_str.endswith('Wrld')          -> False         # Returns a bool that is True if my_str ends with 'Wrld'
+
+my_str.find('Wor')               -> 6             # Returns the index that 'Wor' first occurs in my_str
+my_str.find('Not here')          -> -1            # find() returns -1 if the string is not found in my_str
+
+my_str.index('Wor')              -> 6             # Similar to find(), index() returns index 'Wor' first occurs
+my_str.index('Not here')         -> ValueError    # The difference with index() is it gives a ValueError
+                                                  #   if the string is not found
+
+my_str.count('l')                -> 3             # Returns the number of times 'l' appears in my_str
+my_str.upper()                   -> 'HELLO WORLD' # Returns a new string that converted the old string to all UPPER
+my_str.lower()                   -> 'hello world' # Returns a new string that converted the old string to all lower
+```
+
 ## Lists
 
 ```python
@@ -161,6 +209,7 @@ lst = [1, 2, 3]
 lst.append(4)              -> lst is now [1, 2, 3, 4]       # Add value 4 at the end of lst
 lst.insert(1, 4)           -> lst is now [1, 4, 2, 3, 4]    # Insert at index 1 the value of 4,
                                                             #   and push everything else to the right
+lst.count(4)               -> Returns 2                     # Count and return the amount of times 4 appears in lst
 lst.remove(4)              -> lst is now [1, 2, 3, 4]       # Remove only the first value of 4 in lst
 lst.pop(2)                 -> lst is now [1, 2, 4]          # Remove the item at index 2
 lst.reverse()              -> lst is now [4, 2, 1]          # Reverse the order of values in lst
@@ -220,3 +269,48 @@ for value in lst:
 
 ## While Loops
 
+**Use while loops when you are not sure how many times to do something**
+
+**In other words, to do something until something is not true**
+
+```python
+while bool_expression:
+  do_something()
+```
+
+```python
+x = 10
+
+while x < 100:
+  x += 10       # Adds 10 to x until x is >= 100
+```
+
+## Function Definition
+
+```python
+def my_func(param_one, param_two):
+  result = 0
+  
+  do_stuff_to_compute_result()
+  
+  return result
+```
+
+**Remember that variables defined within a function, including its parameters, only exist within that function**
+
+## Calling a Function
+
+```python
+the_result = my_func(3, 100)
+```
+
+**If the function returns something, you have to save the return value into a variable**
+
+**If it does not return something, you can just call it without saving the result:**
+
+```python
+my_other_func('hello', [1, 3, 7])
+```
+
+Also remember, **when naming functions or variables**, the name **has to start with a letter**, and then **must only
+contain of letters, numbers, and underscores**.
