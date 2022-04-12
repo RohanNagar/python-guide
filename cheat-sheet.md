@@ -128,3 +128,95 @@ else:
   # Else we know that it was not greater than zero or less than zero, so it must be zero
   print(f'The number {x} is zero!')
 ```
+
+## Lists
+
+```python
+lst = ["Hello", 2, 4.0]       # Lists can have any types inside
+lst = [[1, 2, 3], [4, 5, 6]]  # Even other lists
+
+lst = [10, 20, 30, 40, 50]
+
+len(lst)        -> 5          # Get the length of a list (number of elements in the list)
+lst[0]          -> 10         # Get the first element in a list
+lst[-1]         -> 50         # Get the last element in a list
+lst[1]          -> 20         # Get the second element in a list
+lst[-2]         -> 40         # Get the second to last element in a list
+
+# To get a sub-list, do lst[start:end] (remember end is not included!)
+lst[0:4]        -> [10, 20, 30, 40]
+lst[0:1]        -> [10]
+lst[2:5]        -> [30, 40, 50]
+lst[:3]         -> [10, 20, 30]        # start at beginning and end at index 2
+lst[3:]         -> [40, 50]            # start at index 3 and go to end
+```
+
+## List Functions
+
+```python
+lst = [1, 2] + [3, 4]      -> [1, 2, 3, 4]                  # Add two lists together to make one longer list
+lst = [1, 2] * 3           -> [1, 2, 1, 2, 1, 2]            # Replicate a list 3 times
+
+lst = [1, 2, 3]
+lst.append(4)              -> lst is now [1, 2, 3, 4]       # Add value 4 at the end of lst
+lst.insert(1, 4)           -> lst is now [1, 4, 2, 3, 4]    # Insert at index 1 the value of 4,
+                                                            #   and push everything else to the right
+lst.remove(4)              -> lst is now [1, 2, 3, 4]       # Remove only the first value of 4 in lst
+lst.pop(2)                 -> lst is now [1, 2, 4]          # Remove the item at index 2
+lst.reverse()              -> lst is now [4, 2, 1]          # Reverse the order of values in lst
+lst.sort()                 -> lst is now [1, 2, 4]          # Sort the lst
+
+x = min(lst)               # Find the minimum value in lst and return it (x is now equal to the min)
+x = max(lst)               # Find the maximum value in lst and return it (x is now equal to the max)
+x = sum(lst)               # Add up everything in lst and return it (x is now equal to
+                           #   the sum of all the values in lst)
+```
+
+## Range
+
+```python
+range(start, end, step)  # end is not included, step default is 1, start default is 0
+
+range(5)         -> 0 1 2 3 4
+range(3, 8)      -> 3 4 5 6 7
+range(2, 12, 3)  -> 2 5 8 11
+range(20, 5, -5) -> 20 15 10
+range(len(lst))  -> 0 1 2 .... length of lst - 1
+```
+
+## For Loops
+
+**Use for loops when you know how many times to do something.**
+
+**For example when you want to look at every value in a list**
+
+```python
+for i in range(...):
+  do_something()
+```
+
+```python
+# Do something 10 times:
+for i in range(10):
+  print(i)
+```
+
+```python
+# Loop over all indexes in a list:
+lst = [1, 2, 3]
+
+for i in range(len(lst)):
+  if lst[i] > 2:
+    lst[i] = 2            # Replaces any value > 2 in the lst with the value 2
+```
+
+```python
+# Loop over all values in a list (without the index):
+lst = [1, 2, 3]
+
+for value in lst:
+  print(value)            # Prints all values in the list
+```
+
+## While Loops
+
