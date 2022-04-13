@@ -179,21 +179,35 @@ my_str = "Hey" * 3                   -> "HeyHeyHey"       # Can replicate string
 
 my_str = "Hello World"
 
-my_str.startswith('Hello')    -> True          # Returns a bool that is True if my_str starts with 'Hello'
-my_str.endswith('Wrld')       -> False         # Returns a bool that is True if my_str ends with 'Wrld'
+# Returns a bool that is True if my_str starts with 'Hello'
+my_str.startswith('Hello')    -> True
 
-my_str.find('Wor')            -> 6             # Returns the index that 'Wor' first occurs in my_str
-my_str.find('Not here')       -> -1            # find() returns -1 if the string is not found in my_str
+# Returns a bool that is True if my_str ends with 'Wrld'
+my_str.endswith('Wrld')       -> False
 
-my_str.index('Wor')           -> 6             # Similar to find(), index() returns index 'Wor' first occurs
-my_str.index('Not here')      -> ValueError    # The difference with index() is it gives a ValueError
-                                               #   if the string is not found
+# Returns the index that 'Wor' first occurs in my_str
+my_str.find('Wor')            -> 6
 
-my_str.count('l')             -> 3             # Returns the number of times 'l' appears in my_str
-my_str.upper()                -> 'HELLO WORLD' # Returns a new str that converted old string to all UPPER
-my_str.lower()                -> 'hello world' # Returns a new str that converted old string to all lower
+# find() returns -1 if the string is not found in my_str
+my_str.find('Not here')       -> -1
 
-my_str.replace('o', 't')      -> 'Hellt Wtrld' # Returns a new str that replaced all 'o' with 't'
+# Similar to find(), index() returns index 'Wor' first occurs
+my_str.index('Wor')           -> 6
+
+# The difference with index() is it gives a ValueError if the string is not found
+my_str.index('Not here')      -> ValueError
+
+# Returns the number of times 'l' appears in my_str
+my_str.count('l')             -> 3
+
+# Returns a new str that converted old string to all UPPER
+my_str.upper()                -> 'HELLO WORLD'
+
+# Returns a new str that converted old string to all lower
+my_str.lower()                -> 'hello world'
+
+# Returns a new str that replaced all 'o' with 't'
+my_str.replace('o', 't')      -> 'Hellt Wtrld'
 ```
 
 ## Lists
