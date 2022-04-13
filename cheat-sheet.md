@@ -57,6 +57,9 @@ x = str(7.0)        # turns the float 7.0 into the str "7.0"
 
 x = chr(65)         # turns the int 65 into the character 'A' (uses the ASCII chart to map int to chr)
 x = chr(97)         # turns the int 65 into the character 'a' (uses the ASCII chart to map int to chr)
+
+x = ord('A')        # turns the character 'A' into the int 65 (uses the ASCII chart)
+x = ord('Z')        # turns the character 'Z' into the int 90 (uses the ASCII chart)
 ```
 
 ## Importing Modules
@@ -96,6 +99,20 @@ x > 2 or y < 2     # True if either x > 2 or y < 2, or both. Only False if both 
 x > 2 and y < 2    # True only if BOTH x > 2 and y < 2. False if either one is False
 not x > 2          # True if x is NOT greater than 2
 ```
+
+### Truth Tables
+
+| **AND** | | | | | 
+| --- | --- | --- | --- | --- |
+| a | T | T | F | F |
+| b | T | F | T | F |
+| a and b | T | F | F | F |
+
+| **OR** | | | | | 
+| --- | --- | --- | --- | --- |
+| a | T | T | F | F |
+| b | T | F | T | F |
+| a or b | T | T | T | F |
 
 ## Input
 
@@ -175,6 +192,8 @@ my_str.index('Not here')         -> ValueError    # The difference with index() 
 my_str.count('l')                -> 3             # Returns the number of times 'l' appears in my_str
 my_str.upper()                   -> 'HELLO WORLD' # Returns a new string that converted the old string to all UPPER
 my_str.lower()                   -> 'hello world' # Returns a new string that converted the old string to all lower
+
+my_str.replace('o', 't')         -> 'Hellt Wtrld' # Returns a new str that replaces all occurances of 'o' with 't'
 ```
 
 ## Lists
@@ -210,10 +229,13 @@ lst.append(4)              -> lst is now [1, 2, 3, 4]       # Add value 4 at the
 lst.insert(1, 4)           -> lst is now [1, 4, 2, 3, 4]    # Insert at index 1 the value of 4,
                                                             #   and push everything else to the right
 lst.count(4)               -> Returns 2                     # Count and return the amount of times 4 appears in lst
+lst.index(4)               -> Returns 1                     # Return the index of the first occurance of 4
 lst.remove(4)              -> lst is now [1, 2, 3, 4]       # Remove only the first value of 4 in lst
-lst.pop(2)                 -> lst is now [1, 2, 4]          # Remove the item at index 2
-lst.reverse()              -> lst is now [4, 2, 1]          # Reverse the order of values in lst
-lst.sort()                 -> lst is now [1, 2, 4]          # Sort the lst
+lst.pop()                  -> lst is now [1, 2, 3]          # Remove the last item in lst
+lst.pop(1)                 -> lst is now [1, 4]             # Remove the item at index 1
+lst.reverse()              -> lst is now [4, 1]             # Reverse the order of values in lst
+lst.sort()                 -> lst is now [1, 4]             # Sort the lst
+lst.clear()                -> lst is now []                 # Removes all items from lst
 
 x = min(lst)               # Find the minimum value in lst and return it (x is now equal to the min)
 x = max(lst)               # Find the maximum value in lst and return it (x is now equal to the max)
