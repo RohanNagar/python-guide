@@ -179,35 +179,27 @@ my_str = "Hey" * 3                   -> "HeyHeyHey"       # Can replicate string
 
 my_str = "Hello World"
 
-# Returns a bool that is True if my_str starts with 'Hello'
-my_str.startswith('Hello')    -> True
-
-# Returns a bool that is True if my_str ends with 'Wrld'
-my_str.endswith('Wrld')       -> False
-
-# Returns the index that 'Wor' first occurs in my_str
-my_str.find('Wor')            -> 6
-
-# find() returns -1 if the string is not found in my_str
-my_str.find('Not here')       -> -1
-
-# Similar to find(), index() returns index 'Wor' first occurs
-my_str.index('Wor')           -> 6
-
-# The difference with index() is it gives a ValueError if the string is not found
-my_str.index('Not here')      -> ValueError
-
-# Returns the number of times 'l' appears in my_str
-my_str.count('l')             -> 3
-
-# Returns a new str that converted old string to all UPPER
-my_str.upper()                -> 'HELLO WORLD'
-
-# Returns a new str that converted old string to all lower
-my_str.lower()                -> 'hello world'
-
-# Returns a new str that replaced all 'o' with 't'
-my_str.replace('o', 't')      -> 'Hellt Wtrld'
+my_str.startswith('Hello')    -> True           # Returns a bool that is True if
+                                                #   my_str starts with 'Hello'
+my_str.endswith('Wrld')       -> False          # Returns a bool that is True if
+                                                #   my_str ends with 'Wrld'
+my_str.find('Wor')            -> 6              # Returns the index that 'Wor'
+                                                #   first occurs in my_str
+my_str.find('Not here')       -> -1             # find() returns -1 if the string
+                                                #   is not found in my_str
+my_str.index('Wor')           -> 6              # Similar to find(), index() returns
+                                                #   index 'Wor' first occurs
+my_str.index('Not here')      -> ValueError     # The difference with index() is it
+                                                #   gives a ValueError if the string
+                                                #   is not found
+my_str.count('l')             -> 3              # Returns the number of times 'l'
+                                                #   appears in my_str
+my_str.upper()                -> 'HELLO WORLD'  # Returns a new str that converted
+                                                #   old string to all UPPER
+my_str.lower()                -> 'hello world'  # Returns a new str that converted
+                                                #   old string to all lower
+my_str.replace('o', 't')      -> 'Hellt Wtrld'  # Returns a new str that replaced
+                                                #   all 'o' with 't'
 ```
 
 ## Lists
@@ -235,15 +227,16 @@ lst[3:]         -> [40, 50]          # start at index 3 and go to end
 ## List Functions
 
 ```python
-lst = [1, 2] + [3, 4]     -> [1, 2, 3, 4]                # Add two lists together to make one longer list
-lst = [1, 2] * 3          -> [1, 2, 1, 2, 1, 2]          # Replicate a list 3 times
+lst = [1, 2] + [3, 4]     -> [1, 2, 3, 4]            # Add two lists together to make one list
+lst = [1, 2] * 3          -> [1, 2, 1, 2, 1, 2]      # Replicate a list 3 times
 
 lst = [1, 2, 3]
 lst.append(4)       -> lst is now [1, 2, 3, 4]       # Add value 4 at the end of lst
 lst.insert(1, 4)    -> lst is now [1, 4, 2, 3, 4]    # Insert at index 1 the value of 4,
-                                                         #   and push everything else to the right
-lst.count(4)        -> Returns 2                     # Count and return the amount of times 4 appears in lst
-lst.index(4)        -> Returns 1                     # Return the index of the first occurance of 4
+                                                     #   and push everything else to the right
+lst.count(4)        -> Returns 2                     # Count and return the amount of times
+                                                     #   4 appears in lst
+lst.index(4)        -> Returns 1                     # Return index of first occurance of 4
 lst.remove(4)       -> lst is now [1, 2, 3, 4]       # Remove only the first value of 4 in lst
 lst.pop()           -> lst is now [1, 2, 3]          # Remove the last item in lst
 lst.pop(1)          -> lst is now [1, 4]             # Remove the item at index 1
