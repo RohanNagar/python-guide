@@ -239,22 +239,22 @@ lst = [1, 2] + [3, 4]     -> [1, 2, 3, 4]                # Add two lists togethe
 lst = [1, 2] * 3          -> [1, 2, 1, 2, 1, 2]          # Replicate a list 3 times
 
 lst = [1, 2, 3]
-lst.append(4)           -> lst is now [1, 2, 3, 4]       # Add value 4 at the end of lst
-lst.insert(1, 4)        -> lst is now [1, 4, 2, 3, 4]    # Insert at index 1 the value of 4,
+lst.append(4)       -> lst is now [1, 2, 3, 4]       # Add value 4 at the end of lst
+lst.insert(1, 4)    -> lst is now [1, 4, 2, 3, 4]    # Insert at index 1 the value of 4,
                                                          #   and push everything else to the right
-lst.count(4)            -> Returns 2                     # Count and return the amount of times 4 appears in lst
-lst.index(4)            -> Returns 1                     # Return the index of the first occurance of 4
-lst.remove(4)           -> lst is now [1, 2, 3, 4]       # Remove only the first value of 4 in lst
-lst.pop()               -> lst is now [1, 2, 3]          # Remove the last item in lst
-lst.pop(1)              -> lst is now [1, 4]             # Remove the item at index 1
-lst.reverse()           -> lst is now [4, 1]             # Reverse the order of values in lst
-lst.sort()              -> lst is now [1, 4]             # Sort the lst
-lst.clear()             -> lst is now []                 # Removes all items from lst
+lst.count(4)        -> Returns 2                     # Count and return the amount of times 4 appears in lst
+lst.index(4)        -> Returns 1                     # Return the index of the first occurance of 4
+lst.remove(4)       -> lst is now [1, 2, 3, 4]       # Remove only the first value of 4 in lst
+lst.pop()           -> lst is now [1, 2, 3]          # Remove the last item in lst
+lst.pop(1)          -> lst is now [1, 4]             # Remove the item at index 1
+lst.reverse()       -> lst is now [4, 1]             # Reverse the order of values in lst
+lst.sort()          -> lst is now [1, 4]             # Sort the lst
+lst.clear()         -> lst is now []                 # Removes all items from lst
 
-x = min(lst)            # Find the minimum value in lst and return it (x is now equal to the min)
-x = max(lst)            # Find the maximum value in lst and return it (x is now equal to the max)
-x = sum(lst)            # Add up everything in lst and return it (x is now equal to
-                        #   the sum of all the values in lst)
+x = min(lst)        # Find the minimum value in lst and return it (x is now equal to the min)
+x = max(lst)        # Find the maximum value in lst and return it (x is now equal to the max)
+x = sum(lst)        # Add up everything in lst and return it (x is now equal to
+                    #   the sum of all the values in lst)
 ```
 
 ## Range
