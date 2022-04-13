@@ -233,7 +233,7 @@ lst = [1, 2] * 3          -> [1, 2, 1, 2, 1, 2]      # Replicate a list 3 times
 lst = [1, 2, 3]
 lst.append(4)       -> lst is now [1, 2, 3, 4]       # Add value 4 at the end of lst
 lst.insert(1, 4)    -> lst is now [1, 4, 2, 3, 4]    # Insert at index 1 the value of 4,
-                                                     #   and push everything else to the right
+                                                     #   and push everything else right
 lst.count(4)        -> Returns 2                     # Count and return the amount of times
                                                      #   4 appears in lst
 lst.index(4)        -> Returns 1                     # Return index of first occurance of 4
