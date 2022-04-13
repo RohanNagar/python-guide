@@ -16,7 +16,7 @@ print('Put a space after this', end=' ')
 # Print with an f-string
 my_var = 10
 my_second_var = 20
-print(f'The value of variable one is {my_var} and the value of variable two is {my_second_var}')
+print(f'The value of var one is {my_var} and the value of var two is {my_second_var}')
 ```
 
 ## Operations
@@ -31,7 +31,7 @@ x = 6 / 2    # Float division, will result in a float. Example 6 / 2 = 3.0)
 x = 6 // 2   # Integer division, will result in an int. Example 6 // 2 = 3)
 x *= 3       # Multiply x by 3 (same as x = x * 3)
 x = 11 % 10  # Modulo operator. Gives you the remainder. Example 11 % 10 = 1)
-x = 2 ** 3   # Power operator. 2 ** 3 is the same as 2 to the power of 3, which is 2*2*2 = 8)
+x = 2 ** 3   # Power operator. Same as 2 to the power of 3, which is 2*2*2 = 8)
 ```
 
 ## Types and Conversions
@@ -55,8 +55,8 @@ x = float("3.0")    # turns the str "3.0" into the float 3.0
 x = str(3)          # turns the int 3 into the str "3"
 x = str(7.0)        # turns the float 7.0 into the str "7.0"
 
-x = chr(65)         # turns the int 65 into the character 'A' (uses the ASCII chart to map int to chr)
-x = chr(97)         # turns the int 65 into the character 'a' (uses the ASCII chart to map int to chr)
+x = chr(65)         # turns the int 65 into the character 'A' (uses the ASCII chart)
+x = chr(97)         # turns the int 65 into the character 'a' (uses the ASCII chart)
 
 x = ord('A')        # turns the character 'A' into the int 65 (uses the ASCII chart)
 x = ord('Z')        # turns the character 'Z' into the int 90 (uses the ASCII chart)
@@ -95,8 +95,8 @@ x <= 2     # True if x is less than or equal to 2, False if it is not
 x == 2     # True if x is equal to 2, False if it is not
 x != 2     # True if x is NOT equal to 2, False if it is equal to 2
 
-x > 2 or y < 2     # True if either x > 2 or y < 2, or both. Only False if both of these are False
-x > 2 and y < 2    # True only if BOTH x > 2 and y < 2. False if either one is False
+x > 2 or y < 2     # True if either x > 2 or y < 2, or both
+x > 2 and y < 2    # True only if BOTH x > 2 and y < 2
 not x > 2          # True if x is NOT greater than 2
 ```
 
@@ -157,18 +157,18 @@ else:
 ```python
 my_str = 'Hello There'
 
-len(my_str)        -> 11      # Get the length of a string (number of characters in the str)
-my_str[0]          -> 'H'     # Get the first character in a string
-my_str[-1]         -> 'e'     # Get the last character in a string
-my_str[1]          -> 'e'     # Get the second character in a string
-my_str[-2]         -> 'r'     # Get the second to last character in a string
+len(my_str)      -> 11      # Get the length of a string (number of characters in the str)
+my_str[0]        -> 'H'     # Get the first character in a string
+my_str[-1]       -> 'e'     # Get the last character in a string
+my_str[1]        -> 'e'     # Get the second character in a string
+my_str[-2]       -> 'r'     # Get the second to last character in a string
 
 # To get a sub-string, do my_str[start:end] (remember end is not included!)
-my_str[0:4]        -> 'Hell'
-my_str[0:1]        -> 'H'
-my_str[2:5]        -> 'llo'
-my_str[:3]         -> 'Hel'          # start at beginning and end at index 2
-my_str[3:]         -> 'lo There'     # start at index 3 and go to end
+my_str[0:4]      -> 'Hell'
+my_str[0:1]      -> 'H'
+my_str[2:5]      -> 'llo'
+my_str[:3]       -> 'Hel'          # start at beginning and end at index 2
+my_str[3:]       -> 'lo There'     # start at index 3 and go to end
 ```
 
 ## String Functions
@@ -179,21 +179,21 @@ my_str = "Hey" * 3                   -> "HeyHeyHey"       # Can replicate string
 
 my_str = "Hello World"
 
-my_str.startswith('Hello')       -> True          # Returns a bool that is True if my_str starts with 'Hello'
-my_str.endswith('Wrld')          -> False         # Returns a bool that is True if my_str ends with 'Wrld'
+my_str.startswith('Hello')    -> True          # Returns a bool that is True if my_str starts with 'Hello'
+my_str.endswith('Wrld')       -> False         # Returns a bool that is True if my_str ends with 'Wrld'
 
-my_str.find('Wor')               -> 6             # Returns the index that 'Wor' first occurs in my_str
-my_str.find('Not here')          -> -1            # find() returns -1 if the string is not found in my_str
+my_str.find('Wor')            -> 6             # Returns the index that 'Wor' first occurs in my_str
+my_str.find('Not here')       -> -1            # find() returns -1 if the string is not found in my_str
 
-my_str.index('Wor')              -> 6             # Similar to find(), index() returns index 'Wor' first occurs
-my_str.index('Not here')         -> ValueError    # The difference with index() is it gives a ValueError
-                                                  #   if the string is not found
+my_str.index('Wor')           -> 6             # Similar to find(), index() returns index 'Wor' first occurs
+my_str.index('Not here')      -> ValueError    # The difference with index() is it gives a ValueError
+                                               #   if the string is not found
 
-my_str.count('l')                -> 3             # Returns the number of times 'l' appears in my_str
-my_str.upper()                   -> 'HELLO WORLD' # Returns a new string that converted the old string to all UPPER
-my_str.lower()                   -> 'hello world' # Returns a new string that converted the old string to all lower
+my_str.count('l')             -> 3             # Returns the number of times 'l' appears in my_str
+my_str.upper()                -> 'HELLO WORLD' # Returns a new str that converted old string to all UPPER
+my_str.lower()                -> 'hello world' # Returns a new str that converted old string to all lower
 
-my_str.replace('o', 't')         -> 'Hellt Wtrld' # Returns a new str that replaces all occurances of 'o' with 't'
+my_str.replace('o', 't')      -> 'Hellt Wtrld' # Returns a new str that replaced all 'o' with 't'
 ```
 
 ## Lists
@@ -214,33 +214,33 @@ lst[-2]         -> 40         # Get the second to last element in a list
 lst[0:4]        -> [10, 20, 30, 40]
 lst[0:1]        -> [10]
 lst[2:5]        -> [30, 40, 50]
-lst[:3]         -> [10, 20, 30]        # start at beginning and end at index 2
-lst[3:]         -> [40, 50]            # start at index 3 and go to end
+lst[:3]         -> [10, 20, 30]      # start at beginning and end at index 2
+lst[3:]         -> [40, 50]          # start at index 3 and go to end
 ```
 
 ## List Functions
 
 ```python
-lst = [1, 2] + [3, 4]      -> [1, 2, 3, 4]                  # Add two lists together to make one longer list
-lst = [1, 2] * 3           -> [1, 2, 1, 2, 1, 2]            # Replicate a list 3 times
+lst = [1, 2] + [3, 4]     -> [1, 2, 3, 4]                # Add two lists together to make one longer list
+lst = [1, 2] * 3          -> [1, 2, 1, 2, 1, 2]          # Replicate a list 3 times
 
 lst = [1, 2, 3]
-lst.append(4)              -> lst is now [1, 2, 3, 4]       # Add value 4 at the end of lst
-lst.insert(1, 4)           -> lst is now [1, 4, 2, 3, 4]    # Insert at index 1 the value of 4,
-                                                            #   and push everything else to the right
-lst.count(4)               -> Returns 2                     # Count and return the amount of times 4 appears in lst
-lst.index(4)               -> Returns 1                     # Return the index of the first occurance of 4
-lst.remove(4)              -> lst is now [1, 2, 3, 4]       # Remove only the first value of 4 in lst
-lst.pop()                  -> lst is now [1, 2, 3]          # Remove the last item in lst
-lst.pop(1)                 -> lst is now [1, 4]             # Remove the item at index 1
-lst.reverse()              -> lst is now [4, 1]             # Reverse the order of values in lst
-lst.sort()                 -> lst is now [1, 4]             # Sort the lst
-lst.clear()                -> lst is now []                 # Removes all items from lst
+lst.append(4)           -> lst is now [1, 2, 3, 4]       # Add value 4 at the end of lst
+lst.insert(1, 4)        -> lst is now [1, 4, 2, 3, 4]    # Insert at index 1 the value of 4,
+                                                         #   and push everything else to the right
+lst.count(4)            -> Returns 2                     # Count and return the amount of times 4 appears in lst
+lst.index(4)            -> Returns 1                     # Return the index of the first occurance of 4
+lst.remove(4)           -> lst is now [1, 2, 3, 4]       # Remove only the first value of 4 in lst
+lst.pop()               -> lst is now [1, 2, 3]          # Remove the last item in lst
+lst.pop(1)              -> lst is now [1, 4]             # Remove the item at index 1
+lst.reverse()           -> lst is now [4, 1]             # Reverse the order of values in lst
+lst.sort()              -> lst is now [1, 4]             # Sort the lst
+lst.clear()             -> lst is now []                 # Removes all items from lst
 
-x = min(lst)               # Find the minimum value in lst and return it (x is now equal to the min)
-x = max(lst)               # Find the maximum value in lst and return it (x is now equal to the max)
-x = sum(lst)               # Add up everything in lst and return it (x is now equal to
-                           #   the sum of all the values in lst)
+x = min(lst)            # Find the minimum value in lst and return it (x is now equal to the min)
+x = max(lst)            # Find the maximum value in lst and return it (x is now equal to the max)
+x = sum(lst)            # Add up everything in lst and return it (x is now equal to
+                        #   the sum of all the values in lst)
 ```
 
 ## Range
